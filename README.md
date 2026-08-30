@@ -1,3 +1,6 @@
+> **This repository has been archived and consolidated into [`learning-notes`](https://github.com/denis-samatov/learning-notes/tree/main/genetic-algorithms).**
+> This copy is kept for history; see the link above for the current version.
+
 # Genetic Algorithms with DEAP
 
 Genetic algorithms (GAs) are heuristic optimization methods inspired by natural
