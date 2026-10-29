@@ -1,4 +1,4 @@
-> **This repository has been archived and consolidated into [`learning-notes`](https://github.com/denis-samatov/learning-notes/tree/main/genetic-algorithms).**
+> **The consolidated teaching material is maintained in [`learning-notes`](https://github.com/denis-samatov/learning-notes/tree/main/genetic-algorithms).**
 > This copy is kept for history; see the link above for the current version.
 
 # Genetic Algorithms with DEAP
@@ -48,3 +48,9 @@ This repository contains examples of using DEAP for function optimization —
 [`genetic_algorithm_1.ipynb`](genetic_algorithm_1.ipynb) and
 [`genetic_algorithm_2.ipynb`](genetic_algorithm_2.ipynb). Walk through the notebooks to
 see the principles above applied in practice.
+
+## Reproducible example checks
+
+The notebooks seed Python/NumPy before creating the population, reuse the compatible DEAP creator classes in the same kernel, and return a scalar fitness tuple. Run `PYTHONPATH=. pytest tests/ -q` after installing `requirements-tested.txt`. Tests execute both examples, check coordinate bounds, recover the known minima (Himmelblau≈0, x²+4≈4) and repeat the same seeded result. Historical saved notebook outputs, including old NameError traces, are not current validation; restart/run-all regenerates them.
+
+A fixed seed is a regression aid, not an optimizer-quality comparison. For any new performance claim, compare multiple seeds against random search with the same number of objective evaluations, report regret/failure rate and preserve all run results. No such multi-seed superiority experiment was performed by this correction. Current teaching material is maintained in learning-notes.
